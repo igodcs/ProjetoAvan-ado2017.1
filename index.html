@@ -4,10 +4,11 @@
 		<title>CI ConsultInfo </title>
 			<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
 			<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-			
-			
+			<link rel="stylesheet" href="css/responsiveslides.css">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script src="js/responsiveslides.min.js"></script>
 					  <script>
-		    // Você também pode usar "$(window).load(function() {"
+		     // Você também pode usar "$(window).load(function() {"
 			    $(function () {
 			      // Slideshow 1
 			      $("#slider1").responsiveSlides({
@@ -21,11 +22,11 @@
 		<!---inicialização---->
 		
 			<!---cabeçalho inicial---->
-			<div class="header">
+						<div class="header">
 					<div class="top-header">
 						<div class="wrap">
 						<div class="top-header-left">
-							<p>+55-(XXX)XXXXX-1111</p> <!---Numero Ficticio--->
+							<p>+55-(XXX)XXXXX-1111</p>  <!---Numero Ficticio--->
 						</div>
 						<div class="right-left">
 							<ul>
@@ -36,11 +37,27 @@
 						<div class="clear"> </div>
 					</div>
 				</div>
-					<div class="main-header"></div>
+					<div class="main-header">
+						<div class="wrap">
+							<div class="logo">
+								<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+							</div>
+							<div class="social-links">
+								<ul>
+									<li><a href="#"><img src="images/facebook.png" title="facebook" /></a></li>
+									<li><a href="#"><img src="images/twitter.png" title="twitter" /></a></li>
+									<li><a href="#"><img src="images/feed.png" title="Rss" /></a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
 					<div class="clear"> </div>
 					<div class="top-nav">
 						<div class="wrap">
 							<ul>
+
 								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="about.html">Sobre</a></li>
 								<li><a href="services.html">Serviços</a></li>
