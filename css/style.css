@@ -961,6 +961,7 @@ body{
 .contact-form{
 	position:relative;
 	padding-bottom:30px;
+
 }
 .contact-form div{
 	padding:5px 0;
@@ -974,21 +975,36 @@ body{
 	transition: 0.5s ease;
 	-o-transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;
+
+}
+.contact-form select{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #777;
+	padding: 2px 0px 5px 0px;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+
 }
 .contact-form input[type="text"],.contact-form textarea{
 		    padding:8px;
 			display:block;
 			width:98%;
-			border: none;
+			border-width:1px;
+		 border-color:#007DAD;
 			outline:none;
 			font-family: 'Open Sans', sans-serif;
 			font-size: 1em;
 			color: #777;
 			-webkit-appearance:none;
+
 }
 .contact-form textarea{
 		resize:none;
 		height:120px;
+
 }
 .contact-form input[type="submit"]{
 	font-family: 'Open Sans', sans-serif;
@@ -1004,6 +1020,7 @@ body{
 	cursor:pointer;
 	border:none;
 	font-size:1em;
+
 }
 .contact-form input[type="submit"]:hover{
 	color: #303030;
