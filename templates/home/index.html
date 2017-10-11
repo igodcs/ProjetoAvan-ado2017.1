@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>CI ConsultInfo </title>
+			<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" href="{% static "css/responsiveslides.css" %}">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script src="js/responsiveslides.min.js"></script>
+					  <script>
+		     // Você também pode usar "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 1
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 2500,
+			        speed: 600
+			      });
+			});
+		  </script>
+	</head>
+	<body>
+		<!---inicialização---->
+
+			<!---cabeçalho inicial---->
+						<div class="header">
+					<div class="top-header">
+						<div class="wrap">
+						<div class="top-header-left">
+							<p>+55-(XXX)XXXXX-1111</p>  <!---Numero Ficticio--->
+						</div>
+						<div class="right-left">
+							<ul>
+								<li class="login"><a href="#">Login</a></li>
+								<li class="sign"><a href="{% url 'indexCadastro' %}">inscrever-se</a></li>
+							</ul>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+					<div class="main-header">
+						<div class="wrap">
+							<div class="logo">
+								<a href="{% url 'indexHome' %}"><img src="{% static "images/logo.png" %}" title="logo" /></a>
+							</div>
+							<div class="social-links">
+								<ul>
+									<li><a href="#"><img src="{% static "images/facebook.png" %}" title="facebook" /></a></li>
+									<li><a href="#"><img src="{% static "images/twitter.png" %}" title="twitter" /></a></li>
+									<li><a href="#"><img src="{% static "images/feed.png" %}" title="Rss" /></a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+					<div class="top-nav">
+						<div class="wrap">
+							<ul>
+
+								<li class="active"><a href="{% url 'indexHome' %}">Home</a></li>
+								<li><a href="#">Sobre</a></li>
+								<li><a href="#">Serviços</a></li>
+								<li><a href="#">Notícia</a></li>
+								<li><a href="#">Contato</a></li>
+								<div class="#"> </div>
+							</ul>
+						</div>
+					</div>
+			</div>
+			<!---Cabeçalho final---->
+			<!---start-images-slider---->
+			<div class="image-slider">
+						<!-- Slideshow 1 -->
+					    <ul class="rslides rslides1" id="slider1" style="max-width: 2500px;">
+					      <li id="rslides1_s0" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; -webkit-transition: opacity 600ms ease-in-out; transition: opacity 600ms ease-in-out;">
+					      	<img src="{% static "images/slider3.png" %}" alt="">
+					      	<div class="slider-info">
+					      		<p>CI o melhor site do Hospital</p>
+					      		<span>Cuidando da sua saúde com ética, respeito, competência e devoção. </span>
+					      		<a href="#">Consulte Mais informação</a>
+					      	</div>
+					      </li>
+					      <li id="rslides1_s1" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; -webkit-transition: opacity 600ms ease-in-out; transition: opacity 600ms ease-in-out;">
+									<img src="{% static "images/slider2.png" %}" alt="">
+					      	<div class="slider-info">
+					      		<p>CI o melhor site do Hospital</p>
+					      		<span>Cuidando da sua saúde com ética, respeito, competência e devoção. </span>
+					      		<a href="#">Consulte Mais informação</a>
+					      	</div>
+					      </li>
+					      <li id="rslides1_s2" class="rslides1_on" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; -webkit-transition: opacity 600ms ease-in-out; transition: opacity 600ms ease-in-out;">
+					        <div class="slider-info">
+				      		  <p>CI o melhor site do Hospital</p>
+					      		<span>Cuidando da sua saúde com ética, respeito, competência e devoção. </span>
+					      		<a href="#">Consulte Mais informação</a>
+					      	</div>
+					      </li>
+					    </ul>
+						 <!-- Slideshow 2 -->
+					</div>
+			<!---End-images-slider---->
+			<!----start-content----->
+			<div class="content">
+				<div class="content-top-grids">
+					<div class="wrap">
+						<div class="content-top-grid">
+							<div class="content-top-grid-header">
+								<div class="content-top-grid-pic"></div>
+								<div class="content-top-grid-title">
+									<h3>24x7 SERVIÇOS</h3>
+								</div>
+								<div class="clear"> </div>
+							</div>
+								<p>O Serviço funciona 24 horas por dia durante os 7 dias da semana, fora desse momento por favor entra em contato com a clinica.</p>
+								<a class="grid-button" href="#">MAIS</a>
+								<div class="clear"> </div>
+						</div>
+						<div class="content-top-grid">
+							<div class="content-top-grid-header">
+								<div class="content-top-grid-pic"></div>
+								<div class="content-top-grid-title">
+									<h3>CONSELHOS</h3>
+								</div>
+								<div class="clear"> </div>
+							</div>
+								<p>Aconselhamento Medico , dicas e prescrição de medicamentos , para qualquer informação a mais consulte o medico .</p>
+								<a class="grid-button" href="#">MAIS</a>
+								<div class="clear"> </div>
+						</div>
+						<div class="content-top-grid">
+							<div class="content-top-grid-header">
+								<div class="content-top-grid-pic"></div>
+								<div class="content-top-grid-title">
+									<h3>EMERGENCIA</h3>
+								</div>
+								<div class="clear"> </div>
+							</div>
+								<p> Algum problema consulte a Emergencia , aqui você pode ser recepcionado por algum atendente online para consultar ou tirar duvidas .</p>
+								<a class="grid-button" href="#">MAIS</a>
+								<div class="clear"> </div>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<div class="clear"> </div>
+				<div class="boxs">
+					<div class="wrap">
+						<div class="section group">
+							<div class="grid_1_of_3 images_1_of_3">
+								  <h3>BEM VINDO!</h3>
+								  <span>Bem vindo ao portal interativo do CI.</span>
+								  <p>Bem Vindo a os nosso serviços, aqui você conhece as atividades de seus medicos e sabe os atendimentos que podem ser associados a cada um, aproveite bem a passei pelo nosso site, e visite nossas paginas sociais. </p>
+							     <div class="button"><span><a href="#">Mais Aqui</a></span></div>
+							</div>
+							<div class="grid_1_of_3 images_1_of_3">
+								  <h3>SOBRE NÓS</h3>
+								  <span>Nossa missão é tornar a saúde mais eficiente, acessível e de qualidade.
+
+									Acreditamos que profissionais de saúde não devam se preocupar com questões de tecnologia. Pensando nisso, oferecemos um sistema eficiente e extremamente fácil de usar, permitindo a nossos usuários aumentar sua produtividade, reduzir custos, diminuir o índice de falta dos pacientes e economizar tempo para que possam focar naquilo que mais gostam de fazer: cuidar de seus pacientes.
+
+									Nossa visão é ser a melhor e mais inovadora empresa de software em saúde, revolucionando a gestão de clínicas e aprimorando a maneira que lidam com suas informações.<p></p>
+
+							     <div class="button"><span><a href="#">MAIS</a></span></div>
+							</span></div><span>
+							<div class="grid_1_of_3 images_1_of_3">
+								  <h3>NOSSOS SERVIÇOS</h3>
+								  <ul>
+								  	<li><a href="#">Pediatria</a></li>
+								  	<li><a href="#">Odontologia</a></li>
+								  	<li><a href="#">Cardiologia</a></li>
+								  	<li><a href="#">Otorrino</a></li>
+								  	<li><a href="#">Psicologo</a></li>
+								  	<li><a href="#">Terapelta</a></li>
+								  	<li><a href="#">Analise Laboratoriais</a></li>
+								  	</ul>
+							     <div class="button"><span><a href="#">MAIS</a></span></div>
+							</div>
+						</span></div>
+					</div>
+					</div><span>
+			<!----Fim-Conteudo----->
+		</span></div><span>
+		<!---Rodapé---->
+		<!---início-rodapé---->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grids">
+					<div class="footer-grid">
+						<h3>Nosso Perfil</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>Nosso Serviço</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>OUR FLEET</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>CONTATOS</h3>
+						 <p>Para Mais informações</p>
+						 <p>entre em contato com ConsultInfo .</p>
+						 <p>FONE:</p>
+						 <span>(XXX)XXXXX-1111</span>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+
+
+
+			</div>
+		</div>
+		<!--- Final-rodapé --->
+	</span></body>
+</html>
