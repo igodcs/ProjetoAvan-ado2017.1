@@ -1,23 +1,21 @@
+
 <!DOCTYPE HTML>
 {% load staticfiles %}
 <html>
 	<head>
-		<title>CI ConsultInfo </title>
+		<title>CI ConsultInfo</title>
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="{% static "css/responsiveslides.css" %}">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="js/responsiveslides.min.js"></script>
 	</head>
 	<body>
 		<!---inicialização---->
 
 			<!---cabeçalho inicial---->
-			<div class="header">
+						<div class="header">
 					<div class="top-header">
 						<div class="wrap">
 						<div class="top-header-left">
-							<p>+55-(XXX)XXXXX-1111</p> <!---Numero Ficticio--->
+							<p>+55-(XXX)XXXXX-1111</p>  <!---Numero Ficticio--->
 						</div>
 						<div class="right-left">
 							<ul>
@@ -48,6 +46,7 @@
 					<div class="top-nav">
 						<div class="wrap">
 							<ul>
+
 								<li class="active"><a href="{% url 'indexHome' %}">Home</a></li>
 								<li><a href="{% url 'indexSobre' %}">Sobre</a></li>
 								<li><a href="{% url 'indexServicos' %}">Serviços</a></li>
@@ -59,55 +58,87 @@
 					</div>
 			</div>
 			<!---Cabeçalho final---->
-
-			<!----conteúdo inicial----->
+			<!---start-images-slider---->
 			<div class="content">
 				<div class="wrap">
-					<!---formulario----------------------------------------------------------------------->
-
-				<p>
-				<div class="col span_2_of_3">
-				  <div class="contact-form">
-				  	<h3>CADASTRO</h3>
-					    <form>
-
-						    <div>
-						    	<span><label>E-MAIL</label></span>
-						    	<span><input type="text" value=""></span>
-						    </div>
-						    <div>
-						     	<span><label>SENHA</label></span>
-						    	<span><input type="text" value=""></span>
-						    </div>
-								<div>
-								 <span><label>NUMERO TELEFONE</label></span>
-								 <span><input type="text" value=""></span>
-							 </div>
-							 <div>
-								 <span><label>USUARIO TIPO</label></span>
- 						    	<span><select>
-												<option>Cliente</option>
-												<option>Medico</option>
-
-											</select>
-									</span>
-							 </div>
-
-						   <div>
-
- 						   <div>
-						   		<span><input type="submit" value="Submit"></span>
-						  </div>
-					    </form>
-				    </div>
-  				</div>
-			  </div>
-			  </p>
+					<div class="services">
+						<div class="service-content">
+							<h3>Últimas Notícias</h3>
+							<ul>
+								<li><span>1.</span></li>
+								<li><p><a href="#">NOVIDADES</a>As novidades que o consutorio tem a oferecer...</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>2.</span></li>
+								<li><p><a href="#">INSTITUIÇÃO FINANCEIRA</a>
+								As instituiçoes financeiras por tras da clinica .</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>3.</span></li>
+								<li><p><a href="#">PRÉDIO COMERCIAL</a>
+									Falar sobre o Predio onde o Comercio(clinica) funciona.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>4.</span></li>
+								<li><p><a href="#">COMUNIDADES RESIDENCIAIS</a>
+									Fale ou explique aki seus leitos e residencias como são e uq tem a aoferecer para o cliente.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>5.</span></li>
+								<li><p><a href="#">INDÚSTRIA DE VAREJO</a>
+									Fale um pouco sobre o varejo caso a clinica trabalhe com isso.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>6.</span></li>
+								<li><p><a href="#">INSTALAÇÕES DO GOVERNO</a>
+									Se o consutorio for ligado a algum orgão do governo falar aqui sobre ele, e suas contribuições.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>7.</span></li>
+								<li><p><a href="#">CAMPUS &amp; UNIVERSIDADES</a>
+									Se o consutorio tiver algum campus ou Universidade Filiada falar aqui.
+									</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>8.</span></li>
+								<li><p><a href="#">INSTALAÇÕES DE DISTRIBUIÇÃO</a>
+									Falar sobre as Instalções de Distribuição aqui!</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>9.</span></li>
+								<li><p><a href="#">INSTALAÇÕES DE SAÚDE</a>
+								Falar sobre as Instações aqui!</p></li>
+								<div class="clear"> </div>
+							</ul>
+						</div>
+						<div class="services-sidebar">
+							<h3>NÓS PROVEMOS</h3>
+							 <ul>
+							  	<li><a href="#">Atendimento</a></li>
+							  	<li><a href="#">Consultas</a></li>
+							  	<li><a href="#">Exames Laboratoriais</a></li>
+							  	</ul>
+					 		 <h3>ARQUIVOS</h3>
+					 		 <ul>
+					 		 	<li><a href="#">JAN, 2017</a></li>
+					 		 	<li><a href="#">FEV, 2017</a></li>
+					 		 	<li><a href="#">MAR, 2017</a></li>
+					 		 	<li><a href="#">ABRIL, 2017</a></li>
+					 		 </ul>
+						</div>
+						<div class="clear"> </div>
 					</div>
-					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
 				</div>
-			<!----End-content----->
+			<!----Fim-Conteudo----->
 		</div>
 		<!---Rodapé---->
 		<!---início-rodapé---->

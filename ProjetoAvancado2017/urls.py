@@ -22,5 +22,10 @@ urlpatterns = [
     url(r'^cadastro/', include('cadastro.urls')),
     url(r'^login/', include('login.urls')),
     url(r'^home/', include('home.urls')),
+    url(r'^contato/', include('contato.urls')),
+    url(r'^noticias/', include('noticias.urls')),
+    url(r'^servicos/', include('servicos.urls')),
+    url(r'^sobre/', include('sobre.urls')),
+    url(r'^usuarios/', include('usuarios.urls')),
 
 ]

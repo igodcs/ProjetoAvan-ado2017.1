@@ -63,47 +63,29 @@
 			<!----conteúdo inicial----->
 			<div class="content">
 				<div class="wrap">
-					<!---formulario----------------------------------------------------------------------->
-
-				<p>
-				<div class="col span_2_of_3">
-				  <div class="contact-form">
-				  	<h3>CADASTRO</h3>
-					    <form>
-
-						    <div>
-						    	<span><label>E-MAIL</label></span>
-						    	<span><input type="text" value=""></span>
-						    </div>
-						    <div>
-						     	<span><label>SENHA</label></span>
-						    	<span><input type="text" value=""></span>
-						    </div>
-								<div>
-								 <span><label>NUMERO TELEFONE</label></span>
-								 <span><input type="text" value=""></span>
-							 </div>
-							 <div>
-								 <span><label>USUARIO TIPO</label></span>
- 						    	<span><select>
-												<option>Cliente</option>
-												<option>Medico</option>
-
-											</select>
-									</span>
-							 </div>
-
-						   <div>
-
- 						   <div>
-						   		<span><input type="submit" value="Submit"></span>
-						  </div>
-					    </form>
-				    </div>
-  				</div>
-			  </div>
-			  </p>
-					</div>
+					<!---Usuarios----------------------------------------------------------------------->
+          <div class="">
+            <div class="">
+              <h1 id="">DETALHES</h1>
+              <br>
+              <div class="">
+                    <div class="">
+                      <div class="">
+                          <a href="#"><img class="" src="{% static "images/add-user.png" %}" alt=""></a>
+                            <div class="">
+                              <h4 class="">
+                                  <a href="#">NOME: {{usuario.nome}}</a>
+                                </h4>
+                                <h5>EMAIL: {{usuario.email}}</h5>
+                                <p class="card-text">SENHA: {{usuario.senha}}</p>
+                            </div>
+                            <div class="">
+                              <small class=""></small>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
 					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
 				</div>
