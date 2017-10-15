@@ -22,7 +22,7 @@
 						<div class="right-left">
 							<ul>
 								<li class="login"><a href="{% url 'indexLogin' %}">Login</a></li>
-								<li class="sign"><a href="{% url 'indexCadastro' %}">inscrever-se</a></li>
+								<li class="sign"><a href="{% url 'new' %}">inscrever-se</a></li>
 							</ul>
 						</div>
 						<div class="clear"> </div>
@@ -65,20 +65,32 @@
 				<div class="wrap">
 					<!---Usuarios----------------------------------------------------------------------->
 						<div class="">
-							<div class="">
-								<h1 id="titulo">USUARIOS</h1>
+							<div class="col span_2_of_3">
+								<h3 id="titulo">TODOS OS USUARIOS</h3>
 								<br>
 								<div class="">
 									{% for usuario in usuarios %}
 											<div class="">
 												<div class="">
-														<a href="#"><img class="" src="{% static "images/add-user.png" %}" alt=""></a>
+														<a href="#"><img class="" src="{% static "images/" %}" alt=""></a>
 															<div class="">
 																<h4 class="">
-																		<a id="" href="#">NOME: {{produto.nome}}</a>
+																	<p class="">
+																		NOME: {{usuario.nome}}
+																	</p>
 																	</h4>
-																	<h5>EMAIL: {{usuario.email}}</h5>
-																	<p class="">SENHA: {{usuario.senha}}</p>
+																	<p class="">
+																		EMAIL: {{usuario.email}}
+																	</p>
+																	<p class="">
+																		SENHA: {{usuario.senha}}
+																	</p>
+																	<p class="">
+																		TIPO: {{usuario.tipo}}
+																	</p>
+																	<p>
+																		<a href="{% url 'detalhes' usuario.id %}">Detalhes</a>
+																	</p>
 															</div>
 															<div class="">
 																<small class=""></small>
