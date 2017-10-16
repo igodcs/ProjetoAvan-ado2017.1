@@ -10,7 +10,7 @@ def index(request):
 
 def detalhes(request, usuario_id):
 	u = Usuario.objects.get(pk=usuario_id)
-	context_dict = {'usuarios': u}
+	context_dict = {'usuario': u}
 	return render(request, 'usuarios/detalhes.html', context=context_dict)
 
 def new(request):
