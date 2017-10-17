@@ -1,0 +1,185 @@
+
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>CI ConsultInfo</title>
+		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!---inicialização---->
+
+			<!---cabeçalho inicial---->
+						<div class="header">
+					<div class="top-header">
+						<div class="wrap">
+						<div class="top-header-left">
+							<p>+55-(XXX)XXXXX-1111</p>  <!---Numero Ficticio--->
+						</div>
+						<div class="right-left">
+							<ul>
+								<li class="login"><a href="{% url 'indexLogin' %}">Login</a></li>
+								<li class="sign"><a href="{% url 'new' %}">inscrever-se</a></li>
+							</ul>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+					<div class="main-header">
+						<div class="wrap">
+							<div class="logo">
+								<a href="{% url 'indexHome' %}"><img src="{% static "images/logo.png" %}" title="logo" /></a>
+							</div>
+							<div class="social-links">
+								<ul>
+									<li><a href="#"><img src="{% static "images/facebook.png" %}" title="facebook" /></a></li>
+									<li><a href="#"><img src="{% static "images/twitter.png" %}" title="twitter" /></a></li>
+									<li><a href="#"><img src="{% static "images/feed.png" %}" title="Rss" /></a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+					<div class="top-nav">
+						<div class="wrap">
+							<ul>
+
+								<li class="active"><a href="{% url 'indexHome' %}">Home</a></li>
+								<li><a href="{% url 'indexSobre' %}">Sobre</a></li>
+								<li><a href="{% url 'indexServicos' %}">Serviços</a></li>
+								<li><a href="{% url 'indexNoticias' %}">Notícia</a></li>
+								<li><a href="{% url 'indexContato' %}">Contato</a></li>
+								<div class="clear"> </div>
+							</ul>
+						</div>
+					</div>
+			</div>
+			<!---Cabeçalho final---->
+			<!---start-images-slider---->
+			<div class="content">
+				<div class="wrap">
+					<div class="services">
+						<div class="service-content">
+							<h3>Últimas Notícias</h3>
+							<ul>
+								<li><span>1.</span></li>
+								<li><p><a href="#">NOVIDADES</a>As novidades que o consutorio tem a oferecer...</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>2.</span></li>
+								<li><p><a href="#">INSTITUIÇÃO FINANCEIRA</a>
+								As instituiçoes financeiras por tras da clinica .</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>3.</span></li>
+								<li><p><a href="#">PRÉDIO COMERCIAL</a>
+									Falar sobre o Predio onde o Comercio(clinica) funciona.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>4.</span></li>
+								<li><p><a href="#">COMUNIDADES RESIDENCIAIS</a>
+									Fale ou explique aki seus leitos e residencias como são e uq tem a aoferecer para o cliente.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>5.</span></li>
+								<li><p><a href="#">INDÚSTRIA DE VAREJO</a>
+									Fale um pouco sobre o varejo caso a clinica trabalhe com isso.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>6.</span></li>
+								<li><p><a href="#">INSTALAÇÕES DO GOVERNO</a>
+									Se o consutorio for ligado a algum orgão do governo falar aqui sobre ele, e suas contribuições.</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>7.</span></li>
+								<li><p><a href="#">CAMPUS &amp; UNIVERSIDADES</a>
+									Se o consutorio tiver algum campus ou Universidade Filiada falar aqui.
+									</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>8.</span></li>
+								<li><p><a href="#">INSTALAÇÕES DE DISTRIBUIÇÃO</a>
+									Falar sobre as Instalções de Distribuição aqui!</p></li>
+								<div class="clear"> </div>
+							</ul>
+							<ul>
+								<li><span>9.</span></li>
+								<li><p><a href="#">INSTALAÇÕES DE SAÚDE</a>
+								Falar sobre as Instações aqui!</p></li>
+								<div class="clear"> </div>
+							</ul>
+						</div>
+						<div class="services-sidebar">
+							<h3>NÓS PROVEMOS</h3>
+							 <ul>
+							  	<li><a href="#">Atendimento</a></li>
+							  	<li><a href="#">Consultas</a></li>
+							  	<li><a href="#">Exames Laboratoriais</a></li>
+							  	</ul>
+					 		 <h3>ARQUIVOS</h3>
+					 		 <ul>
+					 		 	<li><a href="#">JAN, 2017</a></li>
+					 		 	<li><a href="#">FEV, 2017</a></li>
+					 		 	<li><a href="#">MAR, 2017</a></li>
+					 		 	<li><a href="#">ABRIL, 2017</a></li>
+					 		 </ul>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				<div class="clear"> </div>
+				</div>
+			<!----Fim-Conteudo----->
+		</div>
+		<!---Rodapé---->
+		<!---início-rodapé---->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grids">
+					<div class="footer-grid">
+						<h3>Nosso Perfil</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>Nosso Serviço</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>OUR FLEET</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>CONTATOS</h3>
+						 <p>Para Mais informações</p>
+						 <p>entre em contato com ConsultInfo .</p>
+						 <p>FONE:</p>
+						 <span>(XXX)XXXXX-1111</span>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+
+
+
+			</div>
+		</div>
+		<!--- Final-rodapé --->
+	</span></body>
+</html>

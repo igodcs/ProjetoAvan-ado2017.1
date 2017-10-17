@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>CI ConsultInfo</title>
+		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+		<!---inicialização---->
+
+			<!---cabeçalho inicial---->
+			<div class="header">
+					<div class="top-header">
+						<div class="wrap">
+						<div class="top-header-left">
+							<p>+55-(XXX)XXXXX-1111</p> <!---Numero Ficticio--->
+						</div>
+						<div class="right-left">
+							<ul>
+								<li class="login"><a href="{% url 'indexLogin' %}">Login</a></li>
+								<li class="sign"><a href="{% url 'new' %}">inscrever-se</a></li>
+							</ul>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+					<div class="main-header">
+						<div class="wrap">
+							<div class="logo">
+								<a href="{% url 'indexHome' %}"><img src="{% static "images/logo.png" %}" title="logo" /></a>
+							</div>
+							<div class="social-links">
+								<ul>
+									<li><a href="#"><img src="{% static "images/facebook.png" %}" title="facebook" /></a></li>
+									<li><a href="#"><img src="{% static "images/twitter.png" %}" title="twitter" /></a></li>
+									<li><a href="#"><img src="{% static "images/feed.png" %}" title="Rss" /></a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+					<div class="top-nav">
+						<div class="wrap">
+							<ul>
+								<li class="active"><a href="{% url 'indexHome' %}">Home</a></li>
+								<li><a href="{% url 'indexSobre' %}">Sobre</a></li>
+								<li><a href="{% url 'indexServicos' %}">Serviços</a></li>
+								<li><a href="{% url 'indexNoticias' %}">Notícia</a></li>
+								<li><a href="{% url 'indexContato' %}">Contato</a></li>
+								<div class="clear"> </div>
+							</ul>
+						</div>
+					</div>
+			</div>
+			<!---Cabeçalho final---->
+
+			<!----conteúdo inicial----->
+			<div class="content">
+				<div class="wrap">
+				<div class="about">
+<!------------------------------------------------------------------------------->
+					<div class="container col-md-12 row">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  			<ol class="carousel-indicators">
+		    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    	<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		 	</ol>
+
+		 	<div class="carousel-inner text-center">
+		    	<div class="carousel-item active">
+		    		<img id="imgSlide" class="d-block w-100 img-fluid" src="{% static "images/slider1.jpg" %}" alt="">
+		    	</div>
+		    	<div class="carousel-item">
+		    		<img id="imgSlide" class="d-block w-100 img-fluid" src="{% static "images/" %}" alt="">
+		    	</div>
+		    	<div class="carousel-item">
+		    		<img id="imgSlide" class="d-block w-100 img-fluid" src="{% static "images/" %}" alt="">
+		    	</div>
+		  	</div>
+
+		  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    	<span class="sr-only"></span>
+		  	</a>
+		  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    	<span class="sr-only"></span>
+		  	</a>
+		</div>
+	</div>
+
+		<!------------------------------------------------------------------------------->
+
+
+			</div>
+				<div class="clear"> </div>
+				</div>
+			<!----End-content----->
+		</div>
+		<!---Rodapé---->
+		<!---início-rodapé---->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grids">
+					<div class="footer-grid">
+						<h3>Nosso Perfil</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>Nosso Serviço</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>OUR FLEET</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>CONTATOS</h3>
+						 <p>Para Mais informações</p>
+						 <p>entre em contato com ConsultInfo .</p>
+						 <p>FONE:</p>
+						 <span>(XXX)XXXXX-1111</span>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+
+
+
+			</div>
+		</div>
+		<!--- Final-rodapé --->
+	</span></body>
+</html>
