@@ -60,7 +60,7 @@
 			</div>
 			<!---Cabeçalho final---->
 
-			<!----conteúdo inicial----->
+			<!---conteúdo inicial----->
 			<div class="content">
 				<div class="wrap">
 					<!---formulario----------------------------------------------------------------------->
@@ -70,7 +70,7 @@
 				  <div class="contact-form">
 				  	<h3>NOVA CONSULTA</h3>
 
-            <form class="" action="{% url 'new' %}" method="post">
+            <form class="" action="{% url 'newConsulta' %}" method="post">
               {% csrf_token %}
               {{ form }}
               <input type="submit" value="Submit" />
@@ -84,7 +84,7 @@
 					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
 				</div>
-			<!----End-content----->
+			<!---End-content----->
 		</div>
 		<!---Rodapé---->
 		<!---início-rodapé---->

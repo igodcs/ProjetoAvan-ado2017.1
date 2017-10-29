@@ -20,8 +20,9 @@ def new(request):
 		return HttpResponseRedirect('/home/')
 	else:
 		form = ConsultaForm()
-		context_dict = {'form': form}
-		return render(request, 'consultas/new.html', context=context_dict)
+
+	context_dict = {'form': form}
+	return render(request, 'consultas/new.html', context=context_dict)
 
 def edit(request, consulta_id):
 	consulta = Consulta.objects.get(pk=consulta_id)
@@ -31,8 +32,9 @@ def edit(request, consulta_id):
 		return HttpResponseRedirect('/home/')
 	else:
 		form = ConsultaForm(instance=consulta)
-		context_dict = {'form': form, 'consulta_id': consulta_id}
-		return render(request, 'consultas/edit.html', context=context_dict)
+
+	context_dict = {'form': form, 'consulta_id': consulta_id}
+	return render(request, 'consultas/edit.html', context=context_dict)
 
 def delete(request, consulta_id):
 	consulta = Consulta.objects.get(pk=consulta_id)
