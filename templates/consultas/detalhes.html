@@ -2,10 +2,12 @@
 {% load staticfiles %}
 <html>
 	<head>
-		<title>CI ConsultInfo</title>
+		<title>CI ConsultInfo </title>
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
+		<link rel="stylesheet" href="{% static "css/responsiveslides.css" %}">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/responsiveslides.min.js"></script>
 	</head>
 	<body>
 		<!---inicialização---->
@@ -61,43 +63,39 @@
 			<!----conteúdo inicial----->
 			<div class="content">
 				<div class="wrap">
-				<div class="about">
-<!------------------------------------------------------------------------------->
-					<div class="container col-md-12 row">
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  			<ol class="carousel-indicators">
-		    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		    	<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  		 	</ol>
+					<!---Consultas----------------------------------------------------------------------->
+          <div class="">
+            <div class="">
+              <h1 id="">DETALHES DE CONSULTA {{consulta.codigo}}</h1>
+              <br>
+              <div class="">
+                    <div class="">
+                      <div class="">
+                          <a href="#"><img class="" src="" alt=""></a>
+                            <div class="">
+                              <h4 class="">
+																<p class="">
+																	MEDICO: {{consulta.medico}}
+																</p>
+                                </h4>
+																<p class="">
+																	PACIENTE: {{consulta.paciente}}
+																</p>
+																<p>
+																	<a href="{% url 'edit' consulta.id %}">Editar</a>
+																	<a href="{% url 'delete' consulta.id %}">Remover</a>
 
-		 	<div class="carousel-inner text-center">
-		    	<div class="carousel-item active">
-		    		<img id="imgSlide" class="d-block w-100 img-fluid" src="{% static "images/slider1.jpg" %}" alt="">
-		    	</div>
-		    	<div class="carousel-item">
-		    		<img id="imgSlide" class="d-block w-100 img-fluid" src="{% static "images/" %}" alt="">
-		    	</div>
-		    	<div class="carousel-item">
-		    		<img id="imgSlide" class="d-block w-100 img-fluid" src="{% static "images/" %}" alt="">
-		    	</div>
-		  	</div>
+																</p>
 
-		  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-		    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		    	<span class="sr-only"></span>
-		  	</a>
-		  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-		    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		    	<span class="sr-only"></span>
-		  	</a>
-		</div>
-	</div>
-
-		<!------------------------------------------------------------------------------->
-
-
-			</div>
+                            </div>
+                            <div class="">
+                              <small class=""></small>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
 				</div>
 			<!----End-content----->
