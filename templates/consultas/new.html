@@ -60,7 +60,7 @@
 			</div>
 			<!---Cabeçalho final---->
 
-			<!---conteúdo inicial----->
+			<!----conteúdo inicial----->
 			<div class="content">
 				<div class="wrap">
 					<!---formulario----------------------------------------------------------------------->
@@ -70,7 +70,7 @@
 				  <div class="contact-form">
 				  	<h3>NOVA CONSULTA</h3>
 
-            <form class="" action="{% url 'newConsulta' %}" method="post">
+            <form class="" action="{% url 'new' %}" method="post">
               {% csrf_token %}
               {{ form }}
               <input type="submit" value="Submit" />
@@ -79,13 +79,13 @@
 				    </div>
   				</div>
 			  </div>
-			  </p>
+			  <p></p>
 					</div>
 					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
-				</div>
-			<!---End-content----->
-		</div>
+				
+			<!----End-content----->
+		
 		<!---Rodapé---->
 		<!---início-rodapé---->
 		<div class="footer">
@@ -105,7 +105,7 @@
 						</ul>
 					</div>
 					<div class="footer-grid">
-						<h3>OUR FLEET</h3>
+						<h3>Nossas Ofertas</h3>
 						 <ul>
 							<li><a href="#">MAIS INFORMAÇÕES</a></li>
 
@@ -127,5 +127,5 @@
 			</div>
 		</div>
 		<!--- Final-rodapé --->
-	</span></body>
+	</body>
 </html>
