@@ -21,8 +21,8 @@
 						</div>
 						<div class="right-left">
 							<ul>
-								<li class="login"><a href="{% url 'indexLogin' %}">Login</a></li>
-								<li class="sign"><a href="{% url 'indexCadastro' %}">inscrever-se</a></li>
+								<li class="login"><a href="{% url 'login' %}">Login</a></li>
+								<li class="sign"><a href="{% url 'newUser' %}">inscrever-se</a></li>
 							</ul>
 						</div>
 						<div class="clear"> </div>
@@ -68,12 +68,12 @@
 				<p>
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-				  	<h3>EDITE USUARIO</h3>
+					  	<h3>EDITE CONSULTA</h3>
 
             <form action="" method="post">
               {% csrf_token %}
               {{ form.as_p }}
-              <input type="submit" value="Logar" />
+              <input type="submit" value="Submit" />
             </form>
 
 				    </div>
