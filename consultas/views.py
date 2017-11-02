@@ -40,3 +40,8 @@ def delete(request, consulta_id):
 	consulta = Consulta.objects.get(pk=consulta_id)
 	consulta.delete()
 	return HttpResponseRedirect('/consultas/')
+
+def consultarestrita(request):
+	consultas = Consulta.objects.all()
+	context_dict = {'consultas': consultas}
+	return render(request, 'consultas/consultarestrita.html', context=context_dict)
