@@ -2,9 +2,23 @@
 {% load staticfiles %}
 <html>
 	<head>
-		<title>CI ConsultInfo</title>
+		{% block title %}
+                <title>CI ConsultInfo</title>
+        {% endblock title %}
+   
+		{% block css %}
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/>
+		{% endblock %}
+		{% block javascript %}
+		
+		<script src='/static/js/responsiveslides.min.js'></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="/static/js/responsiveslides.min.js"></script>
+		<script type= "text/javascript" src="{% static "js/responsiveslides.min.js"  %}"></script>
+		<script src="{% static "js/responsiveslides.js"  %}" type="text/javascript"></script>
+		{% endblock %}
 	</head>
 	<body>
 		<!---inicialização---->
@@ -63,7 +77,7 @@
 				<div class="about">
 					<div class="about-topgrid1">
 										<h3>Quem nós somos</h3>
-										<img src="images/slider2.jpg" title="name">
+										<img src="{% static "images/slider2.jpg" %}"  title="name"/>
 										<h4>A CI Tecnology e uma empres que ajuda na Saúde.</h4>
 										<p>a ConsultInfo ou CI e uma empresa que atua no ramo da Saude, queremos entrar e se estabilizar no mercado de Sistemas de Auxilio medico. </p>
 				  </div>
@@ -122,22 +136,22 @@
 									<h3>NOSSOS PROFISSIONAIS</h3>
 									<div class="section group">
 										<div class="grid_1_of_4 images_1_of_4">
-											 <img src="images/d1.jpg">
+											 <img src="{% static "images/d1.jpg" %}"/>
 											 <h3>Roberta </h3>
 											 <p>Fale aqui sobre ela.<a href="#">[...]</a></p>
 										</div>
 										<div class="grid_1_of_4 images_1_of_4">
-											 <img src="images/d2.jpg">
+											 <img src="{% static "images/d2.jpg" %}"/>
 											 <h3>Pedro </h3>
 											 <p>Fale quisobre ele.<a href="#">[...]</a></p>
 										</div>
 										<div class="grid_1_of_4 images_1_of_4">
-											 <img src="images/d3.jpg">
+											 <img src="{% static "images/d3.jpg" %}" />
 											 <h3>Mariana </h3>
 											 <p>Fale aqui sobre ela.<a href="#">[...]</a></p>
 										</div>
 										<div class="grid_1_of_4 images_1_of_4">
-											 <img src="images/d4.jpg">
+											 <img src="{% static "images/d4.jpg" %}" />
 											 <h3>Dr. MM </h3>
 											 <p>Fale qui sobre ele.<a href="#">[...]</a></p>
 										</div>

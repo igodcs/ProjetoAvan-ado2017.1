@@ -2,12 +2,23 @@
 {% load staticfiles %}
 <html>
 	<head>
-		<title>CI ConsultInfo </title>
+		{% block title %}
+                <title>CI ConsultInfo</title>
+        {% endblock title %}
+   
+		{% block css %}
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="{% static "css/responsiveslides.css" %}">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/>
+		{% endblock %}
+		{% block javascript %}
+		
+		<script src='/static/js/responsiveslides.min.js'></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src=""></script>
+		<script src="/static/js/responsiveslides.min.js"></script>
+		<script type= "text/javascript" src="{% static "js/responsiveslides.min.js"  %}"></script>
+		<script src="{% static "js/responsiveslides.js"  %}" type="text/javascript"></script>
+		{% endblock %}
 	</head>
 	<body>
 		<!---inicialização---->
@@ -77,13 +88,13 @@
 				    </div>
   				</div>
 			  </div>
-			  </p>
+			  <p></p>
 					</div>
 					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
-				</div>
+				
 			<!---End-content----->
-		</div>
+		
 		<!---Rodapé---->
 		<!---início-rodapé---->
 		<div class="footer">
@@ -125,5 +136,5 @@
 			</div>
 		</div>
 		<!--- Final-rodapé --->
-	</span></body>
+	</body>
 </html>

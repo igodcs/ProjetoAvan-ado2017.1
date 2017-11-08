@@ -1,15 +1,15 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 {% load staticfiles %}
 <html>
-	<head>
-		{% block title %}
+<head>
+        {% block title %}
                 <title>CI ConsultInfo</title>
         {% endblock title %}
    
 		{% block css %}
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/></head>
+		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/>
 		{% endblock %}
 		{% block javascript %}
 		
@@ -71,7 +71,7 @@
 			</div>
 			<!---Cabeçalho final---->
 
-			<!----conteúdo inicial----->
+			<!---conteúdo inicial----->
 			<div class="content">
 				<div class="wrap">
 					<!---formulario----------------------------------------------------------------------->
@@ -79,24 +79,20 @@
 				<p>
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-					  	<h3>EDITE CONSULTA</h3>
 
-            <form action="" method="post">
-              {% csrf_token %}
-              {{ form.as_p }}
-              <input type="submit" value="Editar" />
-            </form>
 
-				    </div>
-  				</div>
-			  </div>
-			  <p></p>
-					</div>
-					<!---------------------------------------------------------------------------->
-				<div class="clear"> </div>
-				
-			<!----End-content----->
+        <div>
+          
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+<!---End-content----->
 		
+		
+		<div></div>
+		</div>
 		<!---Rodapé---->
 		<!---início-rodapé---->
 		<div class="footer">
@@ -138,5 +134,5 @@
 			</div>
 		</div>
 		<!--- Final-rodapé --->
-	</body>
+	</div></div></div></body>
 </html>
