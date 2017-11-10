@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>CI ConsultInfo </title>
+		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static "css/responsiveslides.css" %}">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src=""></script>
+	</head>
+	<body>
+		<!---inicialização---->
+
+			<!---cabeçalho inicial---->
+			<div class="header">
+					<div class="top-header">
+						<div class="wrap">
+						<div class="top-header-left">
+							<p>+55-(XXX)XXXXX-1111</p> <!---Numero Ficticio--->
+						</div>
+						<div class="right-left">
+							<ul>
+								<h3>ÁREA RESTRITA MEDICO</h3>
+							</ul>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+					<div class="main-header">
+						<div class="wrap">
+							<div class="logo">
+								<a href="{% url 'indexHome' %}"><img src="{% static "images/logo.png" %}" title="logo" /></a>
+							</div>
+							<div class="social-links">
+								<ul>
+									<li><a href="#"><img src="{% static "images/facebook.png" %}" title="facebook" /></a></li>
+									<li><a href="#"><img src="{% static "images/twitter.png" %}" title="twitter" /></a></li>
+									<li><a href="#"><img src="{% static "images/feed.png" %}" title="Rss" /></a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+					<div class="top-nav">
+						<div class="wrap">
+							<ul>
+								<li class="active"><a href="{% url 'indexHome' %}">Home</a></li>
+								<li><a href="{% url 'indexSobre' %}">Sobre</a></li>
+								<li><a href="{% url 'indexServicos' %}">Serviços</a></li>
+								<li><a href="{% url 'indexNoticias' %}">Notícia</a></li>
+								<li><a href="{% url 'indexContato' %}">Contato</a></li>
+								<div class="clear"> </div>
+							</ul>
+						</div>
+					</div>
+			</div>
+			<!---Cabeçalho final---->
+
+			<!---conteúdo inicial----->
+			<div class="content">
+				<div class="wrap">
+					<!---formulario----------------------------------------------------------------------->
+
+				<p>
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  	<h3>ÁREA RESTRITA </h3>
+
+						<ul>
+							<li class=""><a href="{% url 'indexConsultas' %}">Consultas</a></li>
+							<li class=""><a href="{% url 'newConsulta' %}">Nova Consulta</a></li>
+
+						</ul>
+            {% for consulta in consultas %}
+                        <tr>
+                            <td>{{consulta.codigo}}</td>
+                            <td>{{consulta.medico}}</td>
+                            <td>{{consulta.paciente}}</td>
+                            
+                        </tr>
+                    {% endfor %}
+
+				    </div>
+  				</div>
+			  </div>
+			  </p>
+					</div>
+					<!---------------------------------------------------------------------------->
+				<div class="clear"> </div>
+				</div>
+			<!---End-content----->
+		</div>
+		<!---Rodapé---->
+		<!---início-rodapé---->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grids">
+					<div class="footer-grid">
+						<h3>Nosso Perfil</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>Nosso Serviço</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>OUR FLEET</h3>
+						 <ul>
+							<li><a href="#">MAIS INFORMAÇÕES</a></li>
+
+						</ul>
+					</div>
+					<div class="footer-grid">
+						<h3>CONTATOS</h3>
+						 <p>Para Mais informações</p>
+						 <p>entre em contato com ConsultInfo .</p>
+						 <p>FONE:</p>
+						 <span>(XXX)XXXXX-1111</span>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+
+
+
+			</div>
+		</div>
+		<!--- Final-rodapé --->
+	</span></body>
+</html>

@@ -24,7 +24,7 @@ def new(request):
 		new_profile = UserProfile(user=new_user, telefone=telefone, endereco=endereco, tipo=tipo)
 		new_profile.save()
 
-		return HttpResponseRedirect('usuario/new.html')
+		return HttpResponseRedirect('/home/')
 	else:
 		form = UsuarioForm()
 

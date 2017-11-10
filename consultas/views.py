@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from consultas.models import Consulta
 from consultas.forms import ConsultaForm
+from usuarios.models import UserProfile
+from usuarios.forms import UsuarioForm
+from usuarios.forms import LoginForm
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 
 def index(request):
@@ -17,7 +24,7 @@ def new(request):
 	if request.method == 'POST':
 		form = ConsultaForm(request.POST)
 		form.save()
-		return HttpResponseRedirect('/home/')
+
 	else:
 		form = ConsultaForm()
 
@@ -29,7 +36,7 @@ def edit(request, consulta_id):
 	if request.method == 'POST':
 		form = ConsultaForm(request.POST, instance=consulta)
 		form.save()
-		return HttpResponseRedirect('/home/')
+		return HttpResponseRedirect('/consultas/')
 	else:
 		form = ConsultaForm(instance=consulta)
 
@@ -45,3 +52,23 @@ def consultarestrita(request):
 	consultas = Consulta.objects.all()
 	context_dict = {'consultas': consultas}
 	return render(request, 'consultas/consultarestrita.html', context=context_dict)
+
+def consultarestritamedico(request):
+	user = request.user
+	login(request,user)
+	login_usuario = UserProfile.objects.get(user=user)
+	if login_usuario.tipo == 'medico':
+		consultas = Consulta.objects.filter(medico=login_usuario.user.username)
+		context_dict = {'consultas': consultas}
+		return render(request, 'consultas/consultarestritamedico.html', context=context_dict)
+#------------------------------------------------------------------------------------------------
+	#user = request.user
+	#consultas = Consulta.objects.filter(medico=user.login)
+	#context_dict = {'consultas': consultas}
+	#return render(request, 'consultas/consultarestritamedico.html', context=context_dict)
+#------------------------------------------------------------------------------------------------
+
+def consultarestritapaciente(request):
+	consultas = Consulta.objects.all()
+	context_dict = {'consultas': consultas}
+	return render(request, 'consultas/consultarestritapaciente.html', context=context_dict)

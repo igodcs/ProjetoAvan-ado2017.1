@@ -5,14 +5,14 @@
 		{% block title %}
                 <title>CI ConsultInfo</title>
         {% endblock title %}
-   
+
 		{% block css %}
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/>
 		{% endblock %}
 		{% block javascript %}
-		
+
 		<script src='/static/js/responsiveslides.min.js'></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="/static/js/responsiveslides.min.js"></script>
@@ -78,13 +78,12 @@
 				<p>
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-				  	<h3>ÁREA RESTRITA PACIENTE</h3>
+				  	<h3>ÁREA RESTRITA: PACIENTE</h3>
 
-						<ul>
-							<li class=""><a href="{% url 'newConsulta' %}">Nova Consulta</a></li>
-							<li class=""><a href="{% url 'consultarestrita' %}">Suas Consultas</a></li>
+						<p>
+							<h3><a href="{% url 'consultarestritapaciente' %}">Suas Consultas</a></h3>
 
-						</ul>
+						</p>
 				    </div>
   				</div>
 			  </div>
@@ -92,9 +91,9 @@
 					</div>
 					<!---------------------------------------------------------------------------->
 				<div class="clear"> </div>
-				
+
 			<!---End-content----->
-		
+
 		<!---Rodapé---->
 		<!---início-rodapé---->
 		<div class="footer">

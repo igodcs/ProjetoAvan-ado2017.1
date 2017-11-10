@@ -1,7 +1,7 @@
 from django import forms
 
 class UsuarioForm(forms.Form):
-	CHOICES_TIPO = (('paciente', 'Paciente'),('medico', 'Medico'),)
+	CHOICES_TIPO = (('paciente', 'Paciente'),('medico', 'Medico'),('recepcionista','Recepcionista'))
 	login = forms.CharField(label='Login', max_length=30)
 	senha = forms.CharField(label='Senha', max_length=30, widget=forms.PasswordInput())
 	telefone = forms.CharField(label='Telefone', max_length=15)
