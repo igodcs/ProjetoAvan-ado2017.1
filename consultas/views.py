@@ -69,6 +69,10 @@ def consultarestritamedico(request):
 #------------------------------------------------------------------------------------------------
 
 def consultarestritapaciente(request):
-	consultas = Consulta.objects.all()
-	context_dict = {'consultas': consultas}
-	return render(request, 'consultas/consultarestritapaciente.html', context=context_dict)
+	user = request.user
+	login(request,user)
+	login_usuario = UserProfile.objects.get(user=user)
+	if login_usuario.tipo == 'paciente':
+		consultas = Consulta.objects.filter(paciente=login_usuario.user.username)
+		context_dict = {'consultas': consultas}
+		return render(request, 'consultas/consultarestritapaciente.html', context=context_dict)
