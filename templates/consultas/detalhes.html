@@ -5,21 +5,21 @@
 		{% block title %}
                 <title>CI ConsultInfo</title>
         {% endblock title %}
-   
+
 		{% block css %}
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
 		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/></head>
 		{% endblock %}
 		{% block javascript %}
-		
+
 		<script src='/static/js/responsiveslides.min.js'></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="/static/js/responsiveslides.min.js"></script>
 		<script type= "text/javascript" src="{% static "js/responsiveslides.min.js"  %}"></script>
 		<script src="{% static "js/responsiveslides.js"  %}" type="text/javascript"></script>
 		{% endblock %}
-	
+
 	<body>
 		<!---inicialização---->
 
@@ -32,8 +32,7 @@
 						</div>
 						<div class="right-left">
 							<ul>
-								<li class="login"><a href="{% url 'login' %}">Login</a></li>
-								<li class="sign"><a href="{% url 'newUser' %}">inscrever-se</a></li>
+								<h3>ÁREA RESTRITA RECEPCIONISTA</h3>
 							</ul>
 						</div>
 						<div class="clear"> </div>
@@ -74,7 +73,7 @@
 			<!----conteúdo inicial----->
 			<div class="content">
 				<div class="wrap">
-					<!---Consultas----------------------------------------------------------------------->
+					<!---Consultas---------------------------------------------------------------------->
           <div class="">
             <div class="">
               <h1 id="">DETALHES DE CONSULTA {{consulta.codigo}}</h1>
@@ -91,6 +90,15 @@
                                 </h4>
 																<p class="">
 																	PACIENTE: {{consulta.paciente}}
+																</p>
+																<p class="">
+																	DATA: {{consulta.data}}
+																</p>
+																<p class="">
+																	HORA: {{consulta.hora}}
+																</p>
+																<p class="">
+																	CODIGO: {{consulta.codigo}}
 																</p>
 																<p>
 																	<a href="{% url 'edit' consulta.id %}">Editar</a>

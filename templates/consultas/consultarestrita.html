@@ -5,21 +5,21 @@
 		{% block title %}
                 <title>CI ConsultInfo</title>
         {% endblock title %}
-   
+
 		{% block css %}
 		<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/></head>
+		<link rel="stylesheet" href="{% static "css/responsiveslides.css"  %}"/>
 		{% endblock %}
 		{% block javascript %}
-		
+
 		<script src='/static/js/responsiveslides.min.js'></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="/static/js/responsiveslides.min.js"></script>
 		<script type= "text/javascript" src="{% static "js/responsiveslides.min.js"  %}"></script>
 		<script src="{% static "js/responsiveslides.js"  %}" type="text/javascript"></script>
 		{% endblock %}
-	
+
 	<body>
 		<!---inicialização---->
 
@@ -33,7 +33,7 @@
 						<div class="right-left">
 							<ul>
 								<li class="login"><a href="{% url 'login' %}">Login</a></li>
-								<li class="sign"><a href="{% url 'newUser' %}">inscrever-se</a></li>
+								<!--<li class="sign"><a href="{% url 'newUser' %}">inscrever-se</a></li>-->
 							</ul>
 						</div>
 						<div class="clear"> </div>
@@ -79,6 +79,9 @@
 							<div class="col span_2_of_3">
 								<h3 id="titulo">TODAS AS CONSULTAS</h3>
 								<br>
+								<p>
+									<a href="{% url 'restricted_area_recepcionista' %}">Voltar</a>
+								</p>
 								<div class="">
 									{% for consulta in consultas %}
 											<div class="">
@@ -94,10 +97,18 @@
 																		PACIENTE: {{consulta.paciente}}
 																	</p>
 																	<p class="">
+																		DATA: {{consulta.data}}
+																	</p>
+																	<p class="">
+																		HORA: {{consulta.hora}}
+																	</p>
+																	<p class="">
 																		CODIGO: {{consulta.codigo}}
 																	</p>
 
-																	
+																	<p>
+																		<a href="{% url 'detalhes' consulta.id %}">Detalhes</a>
+																	</p>
 															</div>
 															<div class="">
 																<small class=""></small>

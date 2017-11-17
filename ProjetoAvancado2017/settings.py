@@ -41,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'usuarios',
     'consultas',
+    'contato',
+    
+    'widget_tweaks',
+
+    
+
 ]
 
 MIDDLEWARE = [
